@@ -26,8 +26,8 @@ const registrationSchema = new mongoose.Schema({
   college: { type: String, required: true },
   course: { type: String, required: true },
   city: { type: String, required: true },
-  veg: { type: String, required: true },
-  nonveg: { type: String, required: true },
+  veg: { type: String, required: false },
+  nonveg: { type: String, required: false },
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now }
 }, { timestamps: true });

@@ -59,8 +59,6 @@ app.post('/createregistration', async (req, res) => {
             college,
             course,
             city,
-            veg,
-            nonveg
         } = req.body;
 
         // ── Basic validation ──────────────────────────────────────
@@ -92,16 +90,14 @@ app.post('/createregistration', async (req, res) => {
 
         // Create document - using "id" instead of "registrationId"
         const newRegistration = new Registration({
-            id: id,   // ← changed here
+            id: id,
             eventName,
-            participantsName: participantsName,
-            participantsEmail: participantsEmail,
+            participantsName,
+            participantsEmail,
             mobile: mobile?.trim(),
             college: college?.trim(),
             course: course?.trim(),
-            city: city?.trim(),
-            veg: veg,
-            nonveg: nonveg
+            city: city?.trim()
         });
 
         await newRegistration.save();
