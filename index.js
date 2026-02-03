@@ -9,7 +9,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://127.0.0.1:5500', 'https://visionaryvibes2026.netlify.app'],
+    origin: ['http://localhost:5173', 'http://127.0.0.1:5500', 'visionary-vibes-d2cf9.web.app'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 }));
